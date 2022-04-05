@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CI-Home-Work-4-Session-8-Side-Effect-with-useEffect/static/css/main.4498938a.css",
+    "main.js": "/CI-Home-Work-4-Session-8-Side-Effect-with-useEffect/static/js/main.982fd31d.js",
+    "static/js/787.bc7d429a.chunk.js": "/CI-Home-Work-4-Session-8-Side-Effect-with-useEffect/static/js/787.bc7d429a.chunk.js",
+    "index.html": "/CI-Home-Work-4-Session-8-Side-Effect-with-useEffect/index.html",
+    "main.4498938a.css.map": "/CI-Home-Work-4-Session-8-Side-Effect-with-useEffect/static/css/main.4498938a.css.map",
+    "main.982fd31d.js.map": "/CI-Home-Work-4-Session-8-Side-Effect-with-useEffect/static/js/main.982fd31d.js.map",
+    "787.bc7d429a.chunk.js.map": "/CI-Home-Work-4-Session-8-Side-Effect-with-useEffect/static/js/787.bc7d429a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4498938a.css",
+    "static/js/main.982fd31d.js"
+  ]
+}

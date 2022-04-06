@@ -12,15 +12,7 @@ function Text() {
             setLastScrollTop(ScrollTop);
             // console.log("chỉ số trước: " + lastScrollTop);
             // console.log("chỉ số sau: " + ScrollTop);
-            // console.log("chỉ số khác: " + document.documentElement.scrollTop);
-
-            if (ScrollTop < lastScrollTop && ScrollTop > 500) {
-                setShowButton(true);
-            }
-            else {
-                setShowButton(false);
-            }
-
+            (ScrollTop < lastScrollTop && ScrollTop > 500) ? setShowButton(true) : setShowButton(false);
         }
         window.addEventListener("scroll", handleScroll);
         return () => {
@@ -40,10 +32,10 @@ function Text() {
 
     const handleInput = (e) => {
         const inputText = e.target.value;
-        const inputTextCheked = inputText.replace(/\s+/g, ' ').trim();
+        const chekedLastSpace = inputText.replace(/\s+/g, ' ').trim();
         // console.log(inputText);
-        // console.log(inputTextCheked);
-        const countLength = inputTextCheked.split(' ').length;
+        // console.log(chekedLastSpace);
+        const countLength = chekedLastSpace.split(' ').length;
         setCountText(countLength);
         console.log(countLength);
     }
@@ -55,13 +47,17 @@ function Text() {
 
     return (
         <>
-
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12 text-center" >
                         <textarea className="form-control font-weight-bold" placeHolder="Enter something..." rows="10" onChange={(e) => handleInput(e)}></textarea>
                         <label className="display-3">Word(s): {countText}</label>
                     </div>
+                    {showButton && (
+                        <button onClick={scrollToTop} className="back-to-top">
+                            Topup
+                        </button>
+                    )}
                     <div className="col-sm-12 text-center">
                         <h1 className="display-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime necessitatibus porro totam, iure excepturi alias, cum rem, facilis quod temporibus placeat sapiente ipsam sequi obcaecati earum dolorum amet laboriosam? Velit!
@@ -86,12 +82,6 @@ function Text() {
                     </div>
                 </div>
             </div>
-            {showButton && (
-                <button onClick={scrollToTop} className="back-to-top">
-                    Topup
-                </button>
-            )}
-
         </>
     );
 }
